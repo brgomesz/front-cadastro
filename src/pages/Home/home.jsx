@@ -1,20 +1,17 @@
 import "./home.css";
+import api from "../../services/api";
+import { useEffect } from "react";
 
 function Home() {
-  const users = [
-    {
-      id: "12333",
-      name: "Bruno",
-      age: 28,
-      email: "bruno@email.com",
-    },
-    {
-      id: "2312312",
-      name: "Ana Julia",
-      age: 26,
-      email: "ana@email.com",
-    },
-  ];
+  let users = [];
+
+  async function getUsers(){
+    users = await api.get('/usuarios')
+  }
+
+  useEffect(() => {
+      getUsers()
+  }, [])
 
   return (
     <div className="container">
