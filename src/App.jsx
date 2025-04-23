@@ -1,10 +1,12 @@
-import './App.css'
+import "./style.css";
+import Home from "./pages/Home/home";
+
 function App() {
-  return ( 
+  return (
     <div>
-      <h1>Ola React</h1>
+      <Home />
     </div>
-   );
+  );
 }
 
 export default App;
