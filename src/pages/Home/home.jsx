@@ -2,6 +2,7 @@ import "./home.css";
 import api from "../../services/api";
 import { useEffect, useState, useRef } from "react";
 import DataTable from "../../components/Grid";
+import React from "react";
 
 function Home() {
   const [users, setUsers] = useState([]);
