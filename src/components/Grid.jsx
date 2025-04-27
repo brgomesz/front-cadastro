@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
-
+import './Grid.css'
 const columns = ({ deleteUsers }) => [
   { field: "name", headerName: "Nome", width: 130 },
   { field: "age", headerName: "Idade", width: 130 },
