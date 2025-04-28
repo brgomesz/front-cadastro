@@ -6,6 +6,7 @@ import React from "react";
 
 function Home() {
   const [users, setUsers] = useState([]);
+  const [favoritos, setFavoritos] = useState([]);
 
   const inputName = useRef();
   const inputAge = useRef();
@@ -53,27 +54,6 @@ function Home() {
           Cadastrar
         </button>
       </form>
-      {/* <div className="lista">
-        {users.map((user) => (
-          <div key={user.id} className="card">
-            <div>
-              <p>
-                Nome: <span>{user.name}</span>{" "}
-              </p>
-              <p>
-                Idade: <span>{user.age}</span>{" "}
-              </p>
-              <p>
-                E-mail: <span>{user.email}</span>{" "}
-              </p>
-            </div>
-            <div>
-              <button onClick={() => deleteUsers(user.id)}>X</button>
-            </div>
-          </div>
-        ))}
-      </div> */}
-
       <div className="grid">
         <DataTable
           rows={users.map((user) => ({

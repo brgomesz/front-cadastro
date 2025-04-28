@@ -1,14 +1,21 @@
 import "./style.css";
 import Home from "./pages/Home/home";
+import Favoritos from "./pages/Favoritos/favoritos";
+import Button from "@mui/material/Button";
+import { useState } from "react";
 
 function App() {
+  const [showFavoritos, setShowFavoritos] = useState(false);
+
   return (
     <div>
       <div className="navbar">
-        <button>Favoritos</button>
-        <button>Todos</button>
+        <Button variant="contained" onClick={()=> setShowFavoritos(true)}>Favoritos</Button>
+        <Button variant="contained" onClick={()=> setShowFavoritos(false)}>Todos</Button>
       </div>
-      <Home />
+        {!showFavoritos && <Home />}
+        {showFavoritos && <Favoritos />}
+
     </div>
   );
 }

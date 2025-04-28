@@ -1,8 +1,16 @@
 .navbar{
   background-color: #2e2d4e;
-  /* display: flex;
+  display: flex;
   justify-content: flex-end;
-  width: 90%; */
-}
+  padding: 10px;
 
-*{}
+  & button{
+    margin-left: 20px;
+    padding: 5px;
+    background-color: #6d6ab3;
+  }
+  a{
+    color:white;
+    text-decoration:none;
+  }
+}
