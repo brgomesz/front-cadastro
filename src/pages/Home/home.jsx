@@ -23,12 +23,18 @@ function Home() {
     getUsers();
   }
 
+  async function favoriteUsers(id, currentFavStatus) {
+    await api.put(`/usuarios/${id}`, { fav: !currentFavStatus });
+    getUsers();
+  }
+
   async function createUsers() {
     await api.post("/usuarios", {
       name: inputName.current.value,
       age: Number(inputAge.current.value),
       email: inputEmail.current.value,
       city: inputCity.current.value,
+      fav: false,
     });
     getUsers();
   }
@@ -62,8 +68,10 @@ function Home() {
             age: user.age,
             email: user.email,
             city: user.city,
+            fav: user.fav,
           }))}
           deleteUsers={deleteUsers}
+          favoriteUsers={favoriteUsers}
         />
       </div>
     </div>

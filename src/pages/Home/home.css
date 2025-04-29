@@ -81,3 +81,7 @@ form {
     width: 700px;
     margin:100px auto;
 }
+
+@media (max-width: 400px) {
+  
+}
